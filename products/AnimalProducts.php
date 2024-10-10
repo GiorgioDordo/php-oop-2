@@ -1,11 +1,20 @@
 <?php
-class AnimalProduct
+class Products
 {
-    public string $products;
+    public string $imageURL;
+    public int $price;
+    public string $name;
+    public string $description;
 
-    function __contsrtuct(
-        string $_products,
+    public function __construct(
+        string $_imageURL,
+        int $_price,
+        string $_name,
+        string $_description,
     ) {
-        $this->products = $_products;
+        $this->imageURL = $_imageURL;
+        $this->price = $_price;
+        $this->name = $_name;
+        $this->description = $_description;
     }
 }
