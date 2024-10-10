@@ -1,6 +1,7 @@
 <?php 
 require_once __DIR__ . "/../Products.php";
 class Food extends Products {
+    public static $product_category = "Food";
     public string $ingredients;
     public string $weight;
     public string $producer;
@@ -26,6 +27,10 @@ class Food extends Products {
         $this ->ingredients = $_ingredients;
         $this ->weight = $_weight;
         $this ->producer = $_producer;
+    }
+
+    public function staticValue() {
+        return self::$product_category;
     }
 }
 ?>

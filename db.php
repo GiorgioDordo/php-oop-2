@@ -8,7 +8,7 @@ require_once __DIR__ . "/products/Products.php";
 $dog = new Animal("Dog");
 $cat = new Animal("Cat");
 
-$product_1 = new Food ("", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
+$product_1 = new Food ("https://picsum.photos/200/300", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
 "Nuova ricetta! Crocchette Royal Canin Maxi Puppy per cuccioli di tg grande (2-15 mesi), ideali nella fase di crescita, 
 supportano il sistema immunitario e favoriscono l'equilibrio della flora intestinale.", "proteine di pollame disidratate, 
 farina di mais, riso, proteine di maiale disidratate*, grassi animali, mais, glutine di frumento*, farina di frumento, 

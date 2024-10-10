@@ -41,7 +41,9 @@ $products= [
     <main class="container">
         <?php foreach($products as $product) { ?>
         <div class="col-4 card">
+            <h5><?= Food::$product_category; ?></h5>
             <div class="card-body">
+                <img src="https://placedog.net/400x400?random" alt="image">
                 <p>
                     <?= $product->name ?>
                 </p>
