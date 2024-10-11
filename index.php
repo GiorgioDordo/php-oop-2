@@ -2,9 +2,9 @@
 require_once __DIR__ . "/db.php";
 
 $products= [
-    [$product_1],
-    [$product_2],
-    [$product_3],
+    $product_1,
+    $product_2,
+    $product_3,
 ]
 ?>
 
@@ -42,8 +42,8 @@ $products= [
 <body>
     <main class="container d-flex">
         <?php foreach($products as $product) { ?>
+        <h5><?= $product_category; ?></h5>
         <div class="col-4 card">
-            <h5><?= Food::$product_category; ?></h5>
             <div class="card-body">
                 <img src="https://placedog.net/400x400?random" alt="image">
                 <p><strong>Price:</strong><?= $product->price ?> </p>

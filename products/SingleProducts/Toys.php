@@ -1,14 +1,16 @@
 <?php 
 require_once __DIR__ . "/../Products.php";
 class Toys extends Products {
-    public static $product_category = "Toys";
+    public string $material;
 
     function __construct (
+        $_product_category,
         string $imageUrl,
         float $price,
         Animal $animal,
         string $name,
         string $description,
+        string $_material,
         
     ) {
         parent::__construct(
@@ -18,9 +20,7 @@ class Toys extends Products {
             $name,
             $description,
         );
-    }
-    public function staticValue() {
-        return self::$product_category;
+        $this->material = $_material;
     }
 }
 ?>

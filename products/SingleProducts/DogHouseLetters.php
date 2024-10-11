@@ -1,7 +1,6 @@
 <?php 
 require_once __DIR__ . "/../Products.php";
 class HouseLetters extends Products {
-    public static $product_category = "DogHouse & Letters";
     public string $type;
     public string $size;
 
@@ -25,9 +24,6 @@ class HouseLetters extends Products {
         $this ->type = $type;
         $this ->size = $size;
 
-    }
-    public function staticValue() {
-        return self::$product_category;
     }
 }
 ?>
