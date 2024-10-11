@@ -42,7 +42,7 @@ $products= [
 <body>
     <main class="container d-flex">
         <?php foreach($products as $product) { ?>
-        <h5><?= $product_category; ?></h5>
+        <h5><?= get_class($product) ?></h5>
         <div class="col-4 card">
             <div class="card-body">
                 <img src="https://placedog.net/400x400?random" alt="image">

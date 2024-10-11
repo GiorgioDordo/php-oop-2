@@ -8,7 +8,7 @@ require_once __DIR__ . "/products/Products.php";
 $dog = new Animal("Dog");
 $cat = new Animal("Cat");
 
-$product_1 = new Food (Food::$product_category,"https://picsum.photos/200/300", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
+$product_1 = new Food ("https://picsum.photos/200/300", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
 "Nuova ricetta! Crocchette Royal Canin Maxi Puppy per cuccioli di tg grande (2-15 mesi), ideali nella fase di crescita, 
 supportano il sistema immunitario e favoriscono l'equilibrio della flora intestinale.", "proteine di pollame disidratate, 
 farina di mais, riso, proteine di maiale disidratate*, grassi animali, mais, glutine di frumento*, farina di frumento, 
@@ -17,7 +17,7 @@ frutto-oligosaccaridi, tegumento e semi di psillio, lieviti idrolizzati (fonte d
 olio di alghe Schizochytrium sp. (fonte di DHA), succo di yucca schidigera, farina di tagete, glucosammina da fermentazione, idrolizzato 
 di cartilagine (fonte di condroitina).", "100g", "ROYAL CANIN" );
 
-$product_2 = new HouseLetters (HouseLetters::$product_category,"https://picsum.photos/200/300", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
+$product_2 = new HouseLetters ("https://picsum.photos/200/300", 39.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
 "Nuova ricetta! Crocchette Royal Canin Maxi Puppy per cuccioli di tg grande (2-15 mesi), ideali nella fase di crescita, 
 supportano il sistema immunitario e favoriscono l'equilibrio della flora intestinale.", "proteine di pollame disidratate, 
 farina di mais, riso, proteine di maiale disidratate*, grassi animali, mais, glutine di frumento*, farina di frumento, 
@@ -26,7 +26,7 @@ frutto-oligosaccaridi, tegumento e semi di psillio, lieviti idrolizzati (fonte d
 olio di alghe Schizochytrium sp. (fonte di DHA), succo di yucca schidigera, farina di tagete, glucosammina da fermentazione, idrolizzato 
 di cartilagine (fonte di condroitina).", "Dog House", "200x200cm" );
 
-$product_3 = new Toys (Toys::$product_category,"https://picsum.photos/200/300", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
+$product_3 = new Toys ("https://picsum.photos/200/300", 12.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
 "Nuova ricetta! Crocchette Royal Canin Maxi Puppy per cuccioli di tg grande (2-15 mesi), ideali nella fase di crescita, 
 supportano il sistema immunitario e favoriscono l'equilibrio della flora intestinale.", "proteine di pollame disidratate, 
 farina di mais, riso, proteine di maiale disidratate*, grassi animali, mais, glutine di frumento*, farina di frumento, 
