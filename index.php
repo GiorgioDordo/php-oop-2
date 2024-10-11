@@ -40,17 +40,22 @@ $products= [
 </head>
 
 <body>
-    <main class="container d-flex">
+    <header class="d-flex align-items-center">
+        <div class="container">
+            <h1 class="text-center">E-COMMERCE WANNABE</h1>
+        </div>
+    </header>
+    <main class="container d-flex gap-5">
         <?php foreach($products as $product) { ?>
-        <h5><?= get_class($product) ?></h5>
         <div class="col-4 card">
-            <div class="card-body">
-                <img src="https://placedog.net/400x400?random" alt="image">
+            <h5 class="text-center"><?= get_class($product) ?></h5>
+            <div class="card-body d-flex flex-column align-items-center">
+                <img src="<?= $product->imageUrl ?>" alt="image">
                 <p><strong>Price:</strong><?= $product->price ?> </p>
                 <p>
                     <strong><?= $product->name ?></strong>
                 </p>
-                <p><strong>Price:</strong><?= $product->price ?> </p>
+                <p><strong>Price:</strong><?= $product->Animal->animal ?> </p>
                 <p><strong>Price:</strong><?= $product->price ?> </p>
                 <p><strong>Price:</strong><?= $product->price ?> </p>
                 <p><strong>Price:</strong><?= $product->price ?> </p>
