@@ -52,13 +52,19 @@ $products= [
             <div class="card-body d-flex flex-column align-items-center">
                 <img src="<?= $product->imageUrl ?>" alt="image">
                 <p><strong>Price:</strong><?= $product->price ?> </p>
-                <p>
-                    <strong><?= $product->name ?></strong>
-                </p>
-                <p><strong>Price:</strong><?= $product->Animal->animal ?> </p>
-                <p><strong>Price:</strong><?= $product->price ?> </p>
-                <p><strong>Price:</strong><?= $product->price ?> </p>
-                <p><strong>Price:</strong><?= $product->price ?> </p>
+                <p><strong>For:</strong><?= $product->animal->animal ?> </p>
+                <p><strong>Name:<?= $product->name ?></strong></p>
+                <p><strong>Descrizione:</strong><?= $product->description ?> </p>
+                <?php if( $product instanceof Food) {?>
+                <p><strong>Ingredients:</strong><?= $product->ingredients ?></p>
+                <p><strong>Peso:</strong><?= $product->weight ?></p>
+                <p><strong>Produttore:</strong><?= $product->producer ?></p>
+                <?php } else if ( $product instanceof Toys) { ?>
+                <p><strong>Materiale</strong><?= $product->material ?></p>
+                <?php } else if ( $product instanceof HouseLetters) { ?>
+                <p><strong>Materiale:</strong><?= $product->type ?></p>
+                <p><strong></strong><?= $product->size ?></p>
+                <?php } ?>
             </div>
         </div>
         <?php }?>

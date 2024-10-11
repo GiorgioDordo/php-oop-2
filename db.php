@@ -8,14 +8,13 @@ require_once __DIR__ . "/products/Products.php";
 $dog = new Animal("Dog");
 $cat = new Animal("Cat");
 
-$product_1 = new Food ("https://picsum.photos/200/300", 5.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
-"Nuova ricetta! Crocchette Royal Canin Maxi Puppy per cuccioli di tg grande (2-15 mesi), ideali nella fase di crescita, 
-supportano il sistema immunitario e favoriscono l'equilibrio della flora intestinale.", "proteine di pollame disidratate, 
-farina di mais, riso, proteine di maiale disidratate*, grassi animali, mais, glutine di frumento*, farina di frumento, 
-proteine animali idrolizzate, sali minerali, polpa di barbabietola, glutine di mais, fibre vegetali, olio di soia, olio di pesce, 
-frutto-oligosaccaridi, tegumento e semi di psillio, lieviti idrolizzati (fonte di mannano-oligosaccaridi e beta-glucani) (0,30%), 
-olio di alghe Schizochytrium sp. (fonte di DHA), succo di yucca schidigera, farina di tagete, glucosammina da fermentazione, idrolizzato 
-di cartilagine (fonte di condroitina).", "100g", "ROYAL CANIN" );
+$product_1 = new Food ("https://www.bauzaar.it/media/catalog/product/g/r/grafiche-magento-pdv-bauzaar_76_.png?width=700&height=700&store=default&image-type=image", 31.89 , $cat, "Almo Nature Holistic Maintenance Gatto con Tonno e Salmone", 
+"Almo Nature Holistic Mantenimento Gatto con Tonno e Salmone è un alimento secco e completo ideali per il mantenimento di gatti adulti. 
+Sono crocchette arricchite con vitamine e minerali, contengono anche la cellulosa, che facilita l'espulsione delle palle di pelo. 
+Gli ingredienti di pesce nella ricetta 'tonno e salmone' sono anche una naturale fonte di omega-3, che possono aiutare ad avere un pelo sano e lucido. 
+Formulata senza coloranti artificiali, la crocchetta Holistic per gatti offre una grande appetibilità ad un prezzo competitivo!", 
+"Carni e derivati, cereali (riso 4%), pesci e sottoprodotti dei pesci (tonno* 8%, salmone* 8%), oli e grassi (grasso di pollo 5%), 
+sottoprodotti di origine vegetale (cellulosa 0,5%, inulina di cicoria - fonte di FOS- 0,1%), lieviti, sostanze minerali.", "100g", "ALMO NATURE" );
 
 $product_2 = new HouseLetters ("https://arcaplanet.vtexassets.com/arquivos/ids/225622/p-a-y--canile-eco-lodge-medium.jpg?v=637454754161230000", 89.99 , $dog, "Cuccia esterna per Cani Eco Lodge", 
 "La cuccia per cani Eco Lodge Pet Around You è la cuccia ideale proteggere il tuo amico a quattro zampe dalle fredde serate invernali. I particolari sono realizzati con materiali atossici e 
@@ -24,13 +23,8 @@ Le forme morbide rendono la pulizia agevole ovunque; le due finestre sulle paret
 è ecofriendly, unica per l’igiene, per la robustezza, per la praticità e per l’innovativo ed elegante design. Prodotto disponibile in 3 diverse misure prendendo il tetto come riferimento: Cuccia Mini: 60x50x41h cm; 
 Cuccia Media: 79x56x60h cm; Cuccia Large: 99x70x75h cm (misure della porticina d'ingresso: 43.5 altezza X25 lunghezza X28 larghezza).", " Eco Lodge", "Cuccia Mini: 60x50x41h cm" );
 
-$product_3 = new Toys ("https://picsum.photos/200/300", 12.99 , $dog, "Royal Canin Maxi Puppy Crocchette per cane", 
-"Nuova ricetta! Crocchette Royal Canin Maxi Puppy per cuccioli di tg grande (2-15 mesi), ideali nella fase di crescita, 
-supportano il sistema immunitario e favoriscono l'equilibrio della flora intestinale.", "proteine di pollame disidratate, 
-farina di mais, riso, proteine di maiale disidratate*, grassi animali, mais, glutine di frumento*, farina di frumento, 
-proteine animali idrolizzate, sali minerali, polpa di barbabietola, glutine di mais, fibre vegetali, olio di soia, olio di pesce, 
-frutto-oligosaccaridi, tegumento e semi di psillio, lieviti idrolizzati (fonte di mannano-oligosaccaridi e beta-glucani) (0,30%), 
-olio di alghe Schizochytrium sp. (fonte di DHA), succo di yucca schidigera, farina di tagete, glucosammina da fermentazione, idrolizzato 
-di cartilagine (fonte di condroitina).");
+$product_3 = new Toys ("https://www.bauzaar.it/media/catalog/product/g/r/grafiche_prodotti_magento_600x600_-_2021-11-22t123741.271_1.png?width=700&height=700&store=default&image-type=image", 2.99  , $cat, 
+"Kong Giochi Attivi per Gatti", 
+"KONG Giochi Attivi per gatti sono progettati per offrire al vostro gatto una sfida variegata e consentendovi al contempo di personalizzare l’esperienza di gioco.", "gomma");
 
 ?>

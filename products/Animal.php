@@ -1,12 +1,12 @@
 <?php 
 require_once __DIR__ . "/Products.php";
 class Animal {
-    public string $animal;
+    public $animal;
 
-    function __contstruct(
-        string $_animal,
+    function __construct(
+        $animal,
         ) {
-            $this->animal = $_animal; 
+            $this->animal = $animal; 
         }
 }
 
