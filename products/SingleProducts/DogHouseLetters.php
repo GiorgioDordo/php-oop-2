@@ -10,9 +10,9 @@ class HouseLetters extends Products {
         float $price,
         Animal $animal,
         string $name,
+        string $description,
         string $type,
         string $size,
-        string $description,
         
     ) {
         parent::__construct(

@@ -7,6 +7,7 @@ class Food extends Products {
     public string $producer;
 
     public function __construct (
+        $_product_category,
         string $imageUrl,
         float $price,
         Animal $animal,
@@ -24,6 +25,7 @@ class Food extends Products {
             $name,
             $description,
         );
+        $this->product_category = $_product_category;
         $this ->ingredients = $_ingredients;
         $this ->weight = $_weight;
         $this ->producer = $_producer;
