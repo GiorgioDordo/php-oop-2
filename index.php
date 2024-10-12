@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/db.php";
+require_once __DIR__ . "/products/color.php";
 
 $products= [
     $product_1,
@@ -60,7 +61,7 @@ $products= [
                 <p><strong>Peso:</strong><?= $product->weight ?></p>
                 <p><strong>Produttore:</strong><?= $product->producer ?></p>
                 <?php } else if ( $product instanceof Toys) { ?>
-                <p><strong>Colore:</strong><?= $product->color ?></p>
+                <p><?php echo $product->getColor("viola") ?></p>
                 <p><strong>Materiale</strong><?= $product->material ?></p>
                 <?php } else if ( $product instanceof HouseLetters) { ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>

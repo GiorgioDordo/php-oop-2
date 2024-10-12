@@ -1,9 +1,12 @@
 <?php
 trait Color {
-public string $color;
+public $getColor;
 
-function __construct ( string $_color){
-    $this ->color = $_color;
+
+public function getColor($color) {
+    if($color === "viola") {
+    return "Il colore $color è disponibile";
+    }
 }
 }
 ?>
