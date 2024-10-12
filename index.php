@@ -50,10 +50,10 @@ $products= [
         <div class="col-4 card">
             <h5 class="text-center"><?= get_class($product) ?></h5>
             <div class="card-body d-flex flex-column align-items-center">
-                <img src="<?= $product->imageUrl ?>" alt="image">
+                <img class="card-img-top" src="<?= $product->imageUrl ?>" alt="image">
                 <p><strong>Price:</strong><?= $product->price ?> </p>
                 <p><strong>For:</strong><?= $product->animal->animal ?> </p>
-                <p><strong>Name:<?= $product->name ?></strong></p>
+                <p><strong>Name:</strong><?= $product->name ?></p>
                 <p><strong>Descrizione:</strong><?= $product->description ?> </p>
                 <?php if( $product instanceof Food) {?>
                 <p><strong>Ingredients:</strong><?= $product->ingredients ?></p>
@@ -63,7 +63,7 @@ $products= [
                 <p><strong>Materiale</strong><?= $product->material ?></p>
                 <?php } else if ( $product instanceof HouseLetters) { ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>
-                <p><strong></strong><?= $product->size ?></p>
+                <p><strong>Peso:</strong><?= $product->size ?></p>
                 <?php } ?>
             </div>
         </div>
