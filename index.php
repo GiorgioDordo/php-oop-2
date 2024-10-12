@@ -2,7 +2,7 @@
 require_once __DIR__ . "/db.php";
 require_once __DIR__ . "/products/color.php";
 
-$color = "";
+$color = filter_input(INPUT_GET,'color');
 
 $products= [
     $product_1,
@@ -64,10 +64,18 @@ $products= [
                 <p><strong>Produttore:</strong><?= $product->producer ?></p>
                 <?php } else if ( $product instanceof Toys) { ?>
                 <form action="index.php" method="GET">
-                    <label for="color">Scegli il colore</label>
-                    <input class="form-control" type="text" name="color" id="color">
+                    <label for="cars">Scegli il colore:</label>
+                    <select name="color" id="color">
+                        <option value="" selected></option>
+                        <option value="giallo">giallo</option>
+                        <option value="viola">viola</option>
+                        <option value="rosso">rosso</option>
+                        <option value="verde">verde</option>
+                    </select>
+                    <button type="submit">Seleziona</button>
                 </form>
-                <?php if (isset($_GET["color"]) && ($_GET["color"] > 0)) { ?>
+
+                <?php if (isset($_GET["color"])) { ?>
                 <p><?php echo $product->getColor($_GET["color"]); ?></p>
                 <?php } else { ?>
                 <p>Inserire un colore</p>
