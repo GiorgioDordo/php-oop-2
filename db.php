@@ -3,7 +3,7 @@ require_once __DIR__ . "/products/SingleProducts/DogHouseLetters.php";
 require_once __DIR__ . "/products/SingleProducts/PetsFood.php";
 require_once __DIR__ . "/products/SingleProducts/Toys.php";
 require_once __DIR__ . "/products/Animal.php";
-require_once __DIR__ . "/products/Products.php";
+// require_once __DIR__ . "/products/Products.php";
 
 $dog = new Animal("Dog");
 $cat = new Animal("Cat");

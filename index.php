@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . "/db.php";
-require_once __DIR__ . "/products/color.php";
 
 
 $products= [
@@ -76,9 +75,8 @@ $products= [
 
                 <?php if (isset($_GET["color"])) { ?>
                 <p><?php echo $product->getColor($_GET["color"]); ?></p>
-                <?php } else { ?>
-                <p>Inserire un colore</p>
                 <?php } ?>
+
                 <p><strong>Materiale</strong><?= $product->material ?></p>
                 <?php } else if ( $product instanceof HouseLetters) { ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>
