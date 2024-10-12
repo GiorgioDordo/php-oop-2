@@ -2,7 +2,6 @@
 require_once __DIR__ . "/db.php";
 require_once __DIR__ . "/products/color.php";
 
-$color = filter_input(INPUT_GET,'color');
 
 $products= [
     $product_1,
