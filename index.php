@@ -2,6 +2,8 @@
 require_once __DIR__ . "/db.php";
 require_once __DIR__ . "/products/color.php";
 
+$color = "";
+
 $products= [
     $product_1,
     $product_2,
@@ -61,7 +63,15 @@ $products= [
                 <p><strong>Peso:</strong><?= $product->weight ?></p>
                 <p><strong>Produttore:</strong><?= $product->producer ?></p>
                 <?php } else if ( $product instanceof Toys) { ?>
-                <p><?php echo $product->getColor("viola") ?></p>
+                <form action="index.php" method="GET">
+                    <label for="color">Scegli il colore</label>
+                    <input class="form-control" type="text" name="color" id="color">
+                </form>
+                <?php if (isset($_GET["color"]) && ($_GET["color"] > 0)) { ?>
+                <p><?php echo $product->getColor($_GET["color"]); ?></p>
+                <?php } else { ?>
+                <p>Inserire un colore</p>
+                <?php } ?>
                 <p><strong>Materiale</strong><?= $product->material ?></p>
                 <?php } else if ( $product instanceof HouseLetters) { ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>
