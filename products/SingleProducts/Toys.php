@@ -11,6 +11,7 @@ class Toys extends Products {
         Animal $animal,
         string $name,
         string $description,
+        $color,
         string $_material,
         
     ) {
@@ -22,6 +23,7 @@ class Toys extends Products {
             $description,
         );
         $this->material = $_material;
+        $this->color = $color;
     }
 }
 ?>

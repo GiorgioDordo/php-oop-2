@@ -4,6 +4,7 @@ require_once __DIR__ . "/products/SingleProducts/PetsFood.php";
 require_once __DIR__ . "/products/SingleProducts/Toys.php";
 require_once __DIR__ . "/products/Animal.php";
 require_once __DIR__ . "/products/Products.php";
+require_once __DIR__ . "/products/color.php";
 
 $dog = new Animal("Dog");
 $cat = new Animal("Cat");
@@ -25,6 +26,6 @@ Cuccia Media: 79x56x60h cm; Cuccia Large: 99x70x75h cm (misure della porticina d
 
 $product_3 = new Toys ("https://www.bauzaar.it/media/catalog/product/g/r/grafiche_prodotti_magento_600x600_-_2021-11-22t123741.271_1.png?store=default&image-type=image", 2.99  , $cat, 
 "Kong Giochi Attivi per Gatti", 
-"KONG Giochi Attivi per gatti sono progettati per offrire al vostro gatto una sfida variegata e consentendovi al contempo di personalizzare l’esperienza di gioco.", "gomma");
+"KONG Giochi Attivi per gatti sono progettati per offrire al vostro gatto una sfida variegata e consentendovi al contempo di personalizzare l’esperienza di gioco.","viola", "gomma");
 
 ?>
