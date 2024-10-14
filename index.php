@@ -59,13 +59,28 @@ $products= [
                 <?php if( $product instanceof Food) {?>
                 <form action="index.php" method="GET">
                     <label for="foodQuantity">seleziona una quantità:</label>
-                    <input type="number" min="1" max="30" name="foodQuantity" id="foodQuantity">
+                    <input type="number" max="30" value="1" name="foodQuantity" id="foodQuantity">
                     <button type="submit">Seleziona</button>
                 </form>
                 <?php if (isset($_GET["foodQuantity"]) && ($_GET["foodQuantity"]) > 0 ) { ?>
                 <p><?php echo $product->getFoodQuantity($_GET["foodQuantity"]); ?></p>
-                <?php } else { ?>
+                <?php } else if (isset($_GET["foodQuantity"]) && empty($_GET["foodQuantity"])) { ?>
+
+                <?php 
+                        try{
+                            $product->isQuantityNegative($_GET["foodQuantity"]);
+                        }catch (Exception $e){
+                            ?>
+                <p class='text-warning'><strong><?= $e->getMessage() ?></strong></p>
+                <?php
+                        }
+                        
+                    ?>
+
                 <p class='text-warning'><strong>Inserire una quantità.</strong></p>
+
+
+
                 <?php } ?>
                 <p><strong>Ingredients:</strong><?= $product->ingredients ?></p>
                 <p><strong>Peso:</strong><?= $product->weight ?></p>
@@ -78,7 +93,7 @@ $products= [
                 </form>
                 <?php if (isset($_GET["toyQuantity"]) && ($_GET["toyQuantity"]) > 0 ) { ?>
                 <p><?php echo $product->getToysQuantity($_GET["toyQuantity"]); ?></p>
-                <?php } else { ?>
+                <?php } else if (isset($_GET["foodQuantity"]) && empty($_GET["foodQuantity"])) { ?>
                 <p class='text-warning'><strong>Inserire una quantità.</strong></p>
                 <?php } ?>
                 <p><strong>Materiale</strong><?= $product->material ?></p>
@@ -90,7 +105,7 @@ $products= [
                 </form>
                 <?php if (isset($_GET["houseLettersQuantity"]) && ($_GET["houseLettersQuantity"]) > 0 ) { ?>
                 <p><?php echo $product->getHouseLettersQuantity($_GET["houseLettersQuantity"]); ?></p>
-                <?php } else { ?>
+                <?php } else if (isset($_GET["houseLettersQuantity"]) && empty($_GET["houseLettersQuantity"])) { ?>
                 <p class='text-warning'><strong>Inserire una quantità.</strong></p>
                 <?php } ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>
