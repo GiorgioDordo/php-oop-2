@@ -1,8 +1,10 @@
 <?php 
 require_once __DIR__ . "/../Products.php";
+require_once __DIR__ . "/../quantity.php";
 class HouseLetters extends Products {
     public string $type;
     public string $size;
+    use Quantity;
 
     function __construct (
         string $imageUrl,

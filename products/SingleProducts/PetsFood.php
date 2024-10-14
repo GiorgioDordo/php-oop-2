@@ -1,9 +1,11 @@
 <?php 
 require_once __DIR__ . "/../Products.php";
+require_once __DIR__ . "/../quantity.php";
 class Food extends Products {
     public string $ingredients;
     public string $weight;
     public string $producer;
+    use Quantity;
 
     public function __construct (
         string $imageUrl,

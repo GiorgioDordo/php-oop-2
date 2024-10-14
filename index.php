@@ -57,28 +57,42 @@ $products= [
                 <p><strong>Name:</strong><?= $product->name ?></p>
                 <p><strong>Descrizione:</strong><?= $product->description ?> </p>
                 <?php if( $product instanceof Food) {?>
+                <form action="index.php" method="GET">
+                    <label for="foodQuantity">seleziona una quantità:</label>
+                    <input type="number" min="1" max="30" name="foodQuantity" id="foodQuantity">
+                    <button type="submit">Seleziona</button>
+                </form>
+                <?php if (isset($_GET["foodQuantity"]) && ($_GET["foodQuantity"]) > 0 ) { ?>
+                <p><?php echo $product->getFoodQuantity($_GET["foodQuantity"]); ?></p>
+                <?php } else { ?>
+                <p class='text-warning'><strong>Inserire una quantià.</strong></p>
+                <?php } ?>
                 <p><strong>Ingredients:</strong><?= $product->ingredients ?></p>
                 <p><strong>Peso:</strong><?= $product->weight ?></p>
                 <p><strong>Produttore:</strong><?= $product->producer ?></p>
                 <?php } else if ( $product instanceof Toys) { ?>
                 <form action="index.php" method="GET">
-                    <label for="cars">Scegli il colore:</label>
-                    <select name="color" id="color">
-                        <option value="" selected></option>
-                        <option value="giallo">giallo</option>
-                        <option value="viola">viola</option>
-                        <option value="rosso">rosso</option>
-                        <option value="verde">verde</option>
-                    </select>
+                    <label for="toyQuantity">seleziona una quantità:</label>
+                    <input type="number" min="1" max="10" name="toyQuantity" id="toyQuantity">
                     <button type="submit">Seleziona</button>
                 </form>
-
-                <?php if (isset($_GET["color"])) { ?>
-                <p><?php echo $product->getColor($_GET["color"]); ?></p>
+                <?php if (isset($_GET["toyQuantity"]) && ($_GET["toyQuantity"]) > 0 ) { ?>
+                <p><?php echo $product->getToysQuantity($_GET["toyQuantity"]); ?></p>
+                <?php } else { ?>
+                <p class='text-warning'><strong>Inserire una quantià.</strong></p>
                 <?php } ?>
-
                 <p><strong>Materiale</strong><?= $product->material ?></p>
                 <?php } else if ( $product instanceof HouseLetters) { ?>
+                <form action="index.php" method="GET">
+                    <label for="houseLettersQuantity">seleziona una quantità:</label>
+                    <input type="number" min="1" max="10" name="houseLettersQuantity" id="houseLettersQuantity">
+                    <button type="submit">Seleziona</button>
+                </form>
+                <?php if (isset($_GET["houseLettersQuantity"]) && ($_GET["houseLettersQuantity"]) > 0 ) { ?>
+                <p><?php echo $product->getHouseLettersQuantity($_GET["houseLettersQuantity"]); ?></p>
+                <?php } else { ?>
+                <p class='text-warning'><strong>Inserire una quantià.</strong></p>
+                <?php } ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>
                 <p><strong>Peso:</strong><?= $product->size ?></p>
                 <?php } ?>
