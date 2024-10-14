@@ -65,7 +65,7 @@ $products= [
                 <?php if (isset($_GET["foodQuantity"]) && ($_GET["foodQuantity"]) > 0 ) { ?>
                 <p><?php echo $product->getFoodQuantity($_GET["foodQuantity"]); ?></p>
                 <?php } else { ?>
-                <p class='text-warning'><strong>Inserire una quantià.</strong></p>
+                <p class='text-warning'><strong>Inserire una quantità.</strong></p>
                 <?php } ?>
                 <p><strong>Ingredients:</strong><?= $product->ingredients ?></p>
                 <p><strong>Peso:</strong><?= $product->weight ?></p>
@@ -79,7 +79,7 @@ $products= [
                 <?php if (isset($_GET["toyQuantity"]) && ($_GET["toyQuantity"]) > 0 ) { ?>
                 <p><?php echo $product->getToysQuantity($_GET["toyQuantity"]); ?></p>
                 <?php } else { ?>
-                <p class='text-warning'><strong>Inserire una quantià.</strong></p>
+                <p class='text-warning'><strong>Inserire una quantità.</strong></p>
                 <?php } ?>
                 <p><strong>Materiale</strong><?= $product->material ?></p>
                 <?php } else if ( $product instanceof HouseLetters) { ?>
@@ -91,7 +91,7 @@ $products= [
                 <?php if (isset($_GET["houseLettersQuantity"]) && ($_GET["houseLettersQuantity"]) > 0 ) { ?>
                 <p><?php echo $product->getHouseLettersQuantity($_GET["houseLettersQuantity"]); ?></p>
                 <?php } else { ?>
-                <p class='text-warning'><strong>Inserire una quantià.</strong></p>
+                <p class='text-warning'><strong>Inserire una quantità.</strong></p>
                 <?php } ?>
                 <p><strong>Materiale:</strong><?= $product->type ?></p>
                 <p><strong>Peso:</strong><?= $product->size ?></p>
